@@ -20,7 +20,13 @@ export const AddContactForm = ({ addFunction }) => {
       <Label>
         {' '}
         Phone:
-        <input type="tel" name="number" required />
+        <input
+          type="tel"
+          name="number"
+          required
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          placeholder="000-00-00"
+        />
       </Label>
       <SubmitButton type="submit">Add contact</SubmitButton>
     </Form>
